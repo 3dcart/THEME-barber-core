@@ -1053,8 +1053,11 @@ Common page styles */
 
 @media(max-width: 991px){
 	.top-nav, .navbar-wrapper{
-		display: none;
+		
 	}
+.hide-991{
+display:none;
+}
 	.logo{
 		text-align: center;
 	}
@@ -1094,4 +1097,26 @@ Common page styles */
 	.flexslider2 .slides > li{
 		margin-bottom: 0;
 	}
+	.product-item .img img {
+		position: inherit;
+	}
+	.product-item .img {
+		min-height: auto;
+	}
+.top-nav, .navbar-wrapper {
+    display: block !important;
+    text-align: center;
+}
+#searchBox .search-form .search-text {
+    width: 300px !important;
+    border-bottom: 1px solid #666;
+    margin-bottom: 10px;
+}
+.top-nav .useraccount ul {
+    float: none;
+}
+.useraccount{
+	max-width: 315px;
+    margin: auto;
+}
 }
