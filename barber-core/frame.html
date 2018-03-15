@@ -15,12 +15,12 @@
     <link rel="alternate" type="application/rss+xml" title="Latest Blog Posts (RSS 2.0)" href="[store_url]/rss.asp?type=blog" />
     <!--END: FRAME_RSSFEEDS -->
 
-	<!--START: page_styles-->
-	<link rel="stylesheet" href="assets/templates/common-core/lib/bootstrap/css/bootstrap.css" type="text/css" />
-	<link rel="StyleSheet" href="assets/templates/common-core/css/core.min.css" type="text/css" />
-	[page_styles]
-	<link rel="StyleSheet" href="assets/templates/[template]/css/default.css" type="text/css" />
-	<!--END: page_styles-->
+    <!--START: page_styles-->
+    <link rel="stylesheet" href="assets/templates/common-core/lib/bootstrap/css/bootstrap.css" type="text/css" />
+    <link rel="StyleSheet" href="assets/templates/common-core/css/core.min.css" type="text/css" />
+    [page_styles]
+    <link rel="StyleSheet" href="assets/templates/[template]/css/default.css" type="text/css" />
+    <!--END: page_styles-->
 
 </head>
 <body class="[body_class]" data-currency="[currency_symbol]">
@@ -28,18 +28,28 @@
     <section class="top-nav hidden-xs">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
-                    <span class="top-info">*All Products Made in the U.S.</span>
-                </div>
-                <div class="col-sm-8">
+                <div class="col-sm-12">
                     <div class="useraccount clearfix">
+                    
+                        <!--START: FRAME_MENU-->
+                        <nav id="menulinks-outer" class="menulinks">
+                            <ul id="menulinks" class="clearfix">
+                                <!--START: menuitems_view-->
+                                <!--START: TOP_LINK_FORMAT-->
+                                <li><a href="infopage.asp?page=[link_id]" class="menu" target="[link_target]">[link_name]</a></li>
+                                <!--END: TOP_LINK_FORMAT-->
+                                <!--END: menuitems_view-->
+                            </ul>
+                        </nav>
+                        <!--END: FRAME_MENU-->
+                    
                         <ul class="clearfix">
                             <!--START: username-->
-                            <li><a href="/myaccount.asp"> My Account</a></li>
-                            <li><a href="/logout.asp"> Logout</a></li>
+                            <li><a href="/myaccount.asp"> [frame_myaccount-link-text]</a></li>
+                            <li class="hide-991"><a href="/logout.asp"> [frame_logout-link-text]</a></li>
                             <!--END: username-->
                             <!--START: login-->
-                            <li><a href="/myaccount.asp"> My Account</a></li> 
+                            <li class="hide-991"><a href="/myaccount.asp"> [frame_myaccount-link-text]</a></li> 
                             <!--END: login-->
                             <li>
                             <!--START: FRAME_SEARCH-->
@@ -54,12 +64,12 @@
                             </div>
                             <!--END: FRAME_SEARCH-->
                             </li>
-                            <li>
+                            <li class="hide-991">
                             <!--START: shopping_cart-->
                             <div class="minicart">
                                 <a href="view_cart.asp" class="minicart-inner clearfix">
                                     <span class="cart-details">
-                                        <span class="cart-title"> Cart</span>
+                                        <span class="cart-title"> [frame_shopping-cart-text]</span>
                                         <span class="icon-basket cart-icon"></span>
                                     </span>
                                 </a>
@@ -102,7 +112,7 @@
                    
                 </div>
                 <!--<div class="col-sm-3 hidden-xs">
-					<div id="floating-cart" class="floating-cart">
+                    <div id="floating-cart" class="floating-cart">
                         <a href="view_cart.asp" class="minicart-inner clearfix">
                             <span class="icon-basket cart-icon"></span>
                             <span class="cart-details">
@@ -114,7 +124,7 @@
             </div>
         </div>
     </header>
-
+    
     <section class="navbar-wrapper hidden-xs">
         <div class="container">
             <nav class="navbar navbar-inverse navbar-static-top">
@@ -126,18 +136,27 @@
                         <span class="icon-bar"></span>
                     </button>
                 </div>
-                
-                <!--START: FRAME_MENU-->
-                <nav id="menulinks-outer" class="menulinks">
-                    <ul id="menulinks" class="clearfix">
-                        <!--START: menuitems_view-->
-                        <!--START: TOP_LINK_FORMAT-->
-                        <li><a href="infopage.asp?page=[link_id]" class="menu" target="[link_target]">[link_name]</a></li>
-                        <!--END: TOP_LINK_FORMAT-->
-                        <!--END: menuitems_view-->
+                <div id="navbar" class="navbar-collapse collapse">
+                    <!--START: FRAME_CATEGORY-->
+                    <ul id="categories" class="nav navbar-nav">
+                        <!--START: CATEGORIES-->
+                        <li class="[dropdown_class]">
+                            <!--START: CATEGORY_FORMAT-->
+                            <a href="view_category.asp?cat=CATID" [dropdown_attributes]>CATEGORY</a>
+                            <!--END: CATEGORY_FORMAT-->
+                            <!--START: SUB_CATEGORIES-->
+                            <ul class="dropdown-menu">
+                                <!--START: SUB_CATEGORY_FORMAT-->
+                                <li><a href="view_category.asp?cat=CATID" class="subcat">CATEGORY</a></li>
+                                <!--END: SUB_CATEGORY_FORMAT-->
+                            </ul>
+                            <!--END: SUB_CATEGORIEST-->
+
+                        </li>
+                        <!--END: CATEGORIES-->
                     </ul>
-                </nav>
-                <!--END: FRAME_MENU-->
+                    <!--END: FRAME_CATEGORY-->
+                </div>
             </nav>
         </div>
     </section>
@@ -145,11 +164,11 @@
     <!--Get current page template-->
     [page_content]
     <!--/Get current page template-->
-	
+    
     <section class="mailing-section">
         <div class="container">
-        	<div class="row">
-				<div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
                     <!--START: FRAME_MAILLIST-->
                     <div class="mailist-box ajax-mailinglist" data-callfront="mailinglist_callfront" data-callback="mailinglist_response">
                         <form method="post" name="mailing" action="mailing_list_ajax.asp">
@@ -162,21 +181,21 @@
                                 </button>
                             </div>
                             <div class="clearfix maillist-options">
-                                <div class="subscribe"><input id="list_subscribe" type="radio" name="subscribe" value="1" checked="checked"> <label for="list_subscribe">Subscribe</label></div>
-                                <div class="subscribe"><input id="list_unsubscribe" type="radio" name="subscribe" value="0"> <label for="list_unsubscribe">Unsubscribe</label></div>
+                                <div class="subscribe"><input id="list_subscribe" type="radio" name="subscribe" value="1" checked="checked"> <label for="list_subscribe">[mailinglist_subscribe]</label></div>
+                                <div class="subscribe"><input id="list_unsubscribe" type="radio" name="subscribe" value="0"> <label for="list_unsubscribe">[mailinglist_unsubscribe]</label></div>
                             </div>
                         </form>
                         <div id="mailinglist-response" class="mailinglist-response">
-                            <div class="mailinglist-error hidden"><span class="icon-attention"></span> <strong>Ooop!</strong> The email you entered isn't valid.</div>
-                            <div class="mailinglist-subscribed hidden"><span class="icon-ok"></span> <strong>WooHoo!</strong> You subscribed successfully.</div>
-                            <div class="mailinglist-unsubscribed hidden"><span class="icon-ok"></span> <strong>Ok!</strong> You're unsubscribed.</div>
+                            <div class="mailinglist-error hidden"><span class="icon-attention"></span>[mailinglist_email-error]</div>
+                            <div class="mailinglist-subscribed hidden"><span class="icon-ok"></span>[mailinglist_subscribe-success]</div>
+                            <div class="mailinglist-unsubscribed hidden"><span class="icon-ok"></span>[mailinglist_unsubscribe-success]</div>
                         </div>
                     </div>
                     <!--END: FRAME_MAILLIST-->
                 </div>
-    		</div>
+            </div>
         </div>
-	</section><!--.mailing-section ends-->
+    </section><!--.mailing-section ends-->
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -205,22 +224,22 @@
             <div class="footer-social">
                 <div class="row">
                     <div class="col-md-12 hidden-sm hidden-xs">
-						<div class="global-footer">[GLOBAL_FOOTER]</div>
+                        <div class="global-footer">[GLOBAL_FOOTER]</div>
                     </div>
                 </div>
             </div>
         </div>
-		<!--END: global_footer-->
+        <!--END: global_footer-->
         <div class="copyright">
-        	<div class="container">
-            	<div class="col-md-8">
-            		<p>[frame_copyright1]</p>
+            <div class="container">
+                <div class="col-md-8">
+                    <p>[frame_copyright1]</p>
                 </div>
                 <div class="col-md-4">
                     <!--START: social_icons-->
                     <ul class="social-icons list-unstyled list-inline">
 
-                        <li class="social-icons-label hidden-md hidden-sm hidden-xs">Stay Connected</li>
+                        <li class="social-icons-label hidden-md hidden-sm hidden-xs">[frame_social-icons-heading]</li>
 
                         <!--START: social_link_facebook-->
                         <li><a href="[social_link_facebook_url]" class="facebook" target="_blank" title="Like Us on Facebook"><span class="icon-facebook"></span></a></li>
@@ -274,16 +293,16 @@
     <!--END: quickview_modal-->
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
-	<link rel="StyleSheet" href="assets/templates/common-core/lib/fontello/css/fontello.min.css" type="text/css" />
+    <link rel="StyleSheet" href="assets/templates/common-core/lib/fontello/css/fontello.min.css" type="text/css" />
     <link rel="StyleSheet" href="assets/templates/common-core/lib/fontello/css/animation.css" type="text/css" />
-	
-	<!--START: page_scripts-->
+    
+    <!--START: page_scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="assets/templates/common-core/lib/bootstrap/js/bootstrap.js"></script>
     <script src="assets/templates/common-core/js/core.js"></script>
     <script src="assets/templates/[template]/js/main.js"></script>
-	[page_scripts]
-	<!--END: page_scripts-->
+    [page_scripts]
+    <!--END: page_scripts-->
 
     <!--START: quicksearch-->
     <link rel="stylesheet" href="assets/templates/common-core/quicksearch/quicksearch.css" type="text/css" media="screen" />
