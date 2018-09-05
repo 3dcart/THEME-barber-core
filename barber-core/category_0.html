@@ -161,17 +161,17 @@
     		<h3>[product_browsing-history-header]</h3>
     	</div>
     	<div class="product-carousel flexslider">
-    		<!--START: browsing_history_items-->
-    		<!--START: CATEGORY_ITEMS--> 
+			<!--START: browsing_history_items-->
     		<ul class="product-items product-items-[product-cols-number] slides">
-    			<!--START: ITEM_TEMPLATE--> 
+    			<!--START: browsing_history_item-->
     			<li class="product-item" data-catalogid="[catalogid]" data-ajaxcart="1" data-addcart-callback="addcart_callback">
     				<div class="img">
     					<a href="product.asp?itemid=[catalogid]">
     						<img src="[THUMBNAIL]" alt="[name]" class="img-responsive" />
     					</a>
     					<!--START: quickview-->
-    					<button class="quickview" data-toggle="modal">Quick View</button>
+                        <button class="quickview" data-toggle="modal">Quick View</button>
+    					<!--<button class="quickview" data-toggle="modal">Quick View</button>-->
     					<!--END: quickview-->
     				</div>
     				<div class="name">
@@ -189,15 +189,6 @@
     					<!--END: SALEPRICE-->
     				</div>
 
-    				<div class="status">
-    					<!--START: product_availability-->
-    					<span class="availability">[availability]</span>
-    					<!--END: product_availability-->
-    					<!--START: freeshippingblock-->
-    					<span class="freeshipping">[freeshipping]</span>
-    					<!--END: freeshippingblock-->
-    				</div>
-
     				<div class="reviews">
     					<!--START: product_review-->
     					<!--START: product_review_average-->
@@ -206,6 +197,7 @@
     					<!--END: product_review-->
     				</div>
 
+					<!--START: addtocart-->
     				<div class="action">
     					<a href="add_cart.asp?quick=1&amp;item_id=[catalogid]" class="add-to-cart btn btn-default">
     						<span class="buyitlink-text">[category_buyitlink]</span>
@@ -213,22 +205,78 @@
     						<span class="ajaxcart-added icon-ok"></span>
     					</a>
     				</div>
+					<!--END: addtocart-->
     			</li>
-    			<!--END: ITEM_TEMPLATE--> 
+    			<!--END: browsing_history_item-->
     		</ul>
-    		<!--END: CATEGORY_ITEMS-->
-    		<!--END: browsing_history_items-->
+			<!--END: browsing_history_items-->
     	</div>
     </div>
 </section>
 <!--END: browsing_history-->
 
+
+
+<!--START: PRODUCT_COMPARE-->
+<!--START: CompareProduct-->
+<div id="resultCompare" class="flexbox"></div>
+<!--END: CompareProduct-->
+
+<div id="divAdd" name="divAdd" class="alert-notice" style="display: none; ">
+    <!-- Alerts Basket -->
+    <div class="i-section">
+        <div class="col-md-12" id="comparepopup">
+            <h2>[productcompare_product-added]</h2>
+        </div>
+    </div>
+    <div class="i-section">
+        <div class="col-md-12" id="compareduplicate" hidden="hidden">
+            <h2>[productcompare_product-duplicate]</h2>
+        </div>
+    </div>
+    <div class="i-section">
+        <div class="col-md-12" id="comparelimit" hidden="hidden">
+            <h2>[productcompare_product-limit]</h2>
+        </div>
+    </div>
+</div>
+<div id="divcomparepopup" name="divComparePopup" style="display: none;">
+    <form action="product_compare.asp" method="post" name="addcompare" id="addcompare">
+        <div id="compare-basket" class="compare-basket">
+            <div id="comparepopupbuttons">
+                <div class="button--actions" style="display: none">
+                    <input type="button" id="btnOK" class="btn btn-default btn-save modalCloseImg" value="OK" />
+                </div>
+                <div class="button--actions">
+                <button id="btnCompareNow" onclick="javascript: redirectCookie();" class="action action--button action--compare">
+                    <i class="fa fa-check"></i><span class="action__text">Compare</span>
+                </button>
+                </div>
+				<div class="button--actions">
+                    <input type="button" id="btnClear" onclick="javascript: emptyBasket();" value="Clear List" class="btn btn-default" />
+                </div>
+                <div class="button--actions" style="display: none">
+                    <input type="button" id="btnCancel" hidden="hidden" class="btn btn-default modalCloseImg" value="Cancel" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!--END: PRODUCT_COMPARE-->
+
 <!--START: template_scripts-->
 <script type="text/javascript" src="/assets/templates/common-core/lib/flexslider/jquery.flexslider-min.js"></script>
+<!--START: PRODUCT_COMPARE_SCRIPTS-->
+<script type="text/javascript" src="/assets/templates/common-html5/js/product_compare.js"></script>
+<script type="text/javascript">
+    checkCategoryChange([catid]);
+</script>
+<!--END: PRODUCT_COMPARE_SCRIPTS-->
 <script type="text/javascript" src="/assets/templates/common-core/js/category.js"></script>
 <!--END: template_scripts-->
 
 <!--START: template_styles-->
 <link rel="stylesheet" href="/assets/templates/common-core/lib/flexslider/flexslider.css" type="text/css" media="screen" />
+<!--START: PRODUCT_COMPARE_STYLES--><link rel="stylesheet" href="/assets/templates/common-html5/css/product_compare.css" type="text/css" media="all" /><!--END: PRODUCT_COMPARE_STYLES-->
 <link rel="stylesheet" href="/assets/templates/common-core/css/category.css" type="text/css" media="screen" />
 <!--END: template_styles-->
