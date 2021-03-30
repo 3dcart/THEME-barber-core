@@ -1338,18 +1338,14 @@ ul.extrapages li a {
     height: 40px;
     font-weight: 400;
     border-color: #464646 !important;
-    background-color: #fff !important;
-    font-size: 0px;
+    background-color: #fff !important;    
     color: #464646 !important;
     border-radius: 0;
 }
 .mailinglist-submit i{
     font-size: 18px;
 }
-@media (min-width: 768px) {
-    .mailinglist-submit {
-        font-size: 0px;
-    }
+@media (min-width: 768px) {    
     .mailinglist-submit i{
         display: block;
     }
@@ -1762,7 +1758,7 @@ span.freeshipping {
 .products-section h2 span,.products-section h1 span {
 	color: #[headings_color];
 }
-.products-section h2 span:after {
+.products-section h2 span:after,.products-section h1 span:after {
 	content:'';
 	display: none;
 	background: none;

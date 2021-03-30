@@ -447,9 +447,9 @@ $(document).ready(function (){
 });
 
 jQuery(function () { 
-	jQuery('.nav .dropdown > a').attr("aria-expanded","false");
-	jQuery('.nav .dropdown > a').attr("aria-haspopup","true");
-    jQuery('.nav .dropdown > a').hover(function (e) {
+	jQuery('.navbar-nav .dropdown > a').attr("aria-expanded","false");
+	jQuery('.navbar-nav .dropdown > a').attr("aria-haspopup","true");
+    jQuery('.navbar-nav .dropdown > a').hover(function (e) {
         var menuItem = jQuery( e.currentTarget );
 
         if (menuItem.attr( 'aria-expanded') === 'true') {
