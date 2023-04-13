@@ -6,7 +6,9 @@
 .antiCls { 
     visibility: hidden; 
 }
-
+.copyright_txt a{
+    color:#fff;
+}
 body {
 	display: flex;
 	height: 100%;
@@ -1429,7 +1431,7 @@ ul.social-icons li.social-icons-label {
     display: inline-block;
     font-size: 14px;
     font-weight: 600;
-    color: #464646;
+    color: #fff;
     vertical-align: text-bottom;
     text-transform: uppercase;
     padding: 0 0px;
