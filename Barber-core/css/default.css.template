@@ -2,13 +2,18 @@
 ** Bootstrap over-rides
 */
 
-html, body {
-  height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Old+Standard+TT:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap');
+.antiCls { 
+    visibility: hidden; 
+}
+.copyright_txt a{
+    color:#fff;
 }
 body {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	min-height: 100vh;
 }
 #skip a
 {
@@ -26,10 +31,10 @@ width:auto;
 height:auto;
 }
 .page-content {
-  flex: 1 0 auto;
+	flex: 1 0 auto;
 }
 footer {
-  flex-shrink: 0;
+	flex-shrink: 0;
 }
 .product-items.productList .product-item .img a {
     position: initial;
@@ -381,7 +386,6 @@ div.qaLink a {
     color: #[btn2_text_color];
     opacity: 0.75;
 }
-
 .btn-default.btn-inverse,
 .btn-primary {
     color: #[btn_text_color];
@@ -1196,7 +1200,7 @@ span.cart-count {
 }
 
 .site-footer {
-	border-top: 1px solid #[footer_color];
+    border-top: 1px solid #[footer_color];
 	background: #[footer_color];
 	padding: 20px 0px 0px;
 }
@@ -1427,7 +1431,7 @@ ul.social-icons li.social-icons-label {
     display: inline-block;
     font-size: 14px;
     font-weight: 600;
-    color: #464646;
+    color: #fff;
     vertical-align: text-bottom;
     text-transform: uppercase;
     padding: 0 0px;
@@ -1745,7 +1749,7 @@ span.freeshipping {
 	display: block;
 	background: #eee;
 	text-align: center;
-	color: #[headings_color];;
+	color: #[headings_color];
 	font-size: 22px;
 	letter-spacing: 0px;
 	line-height: 32px;
@@ -2029,7 +2033,7 @@ span.freeshipping {
         left: 0;
         max-height: 98%;
     }
-    .products-section h2, .home-page-content .category-header h3,.products-section h1 {
+    .products-section h2, .home-page-content .category-header h3,,.products-section h1 {
         font-size: 24px;
 		margin-bottom: 15px;
     }

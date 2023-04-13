@@ -2,6 +2,13 @@
 ** Bootstrap over-rides
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Old+Standard+TT:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap');
+.antiCls { 
+    visibility: hidden; 
+}
+.copyright_txt a{
+    color:#fff;
+}
 body {
 	display: flex;
 	height: 100%;
@@ -1253,7 +1260,7 @@ ul.extrapages li a {
 }
 .copyright {
 	border-top: 1px solid #ccc;
-	margin-top: 0px;
+	margin-top: 20px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background: none;
@@ -1421,14 +1428,15 @@ ul.payment-icons li {
 
 ul.payment-icons li.payment-icons-label,
 ul.social-icons li.social-icons-label {
-    display: inline-block;
+    display: block;
     font-size: 14px;
     font-weight: 600;
-    color: #464646;
+    color: #fff;
     vertical-align: text-bottom;
     text-transform: uppercase;
     padding: 0 0px;
-    margin: 0 0 5px;
+    margin: 0 0 5px !important;
+    text-align: right;
 }
 
 .social-icons {
@@ -1436,7 +1444,7 @@ ul.social-icons li.social-icons-label {
     float: none;
     margin: 8px 0 8px 0;
     padding: 0 !important;
-    text-align: center;
+    text-align: right;
     color: #fff;
 }
 .social-icons li {

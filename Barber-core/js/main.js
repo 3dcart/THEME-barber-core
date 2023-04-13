@@ -371,6 +371,18 @@ jQuery(function () {
 	}
 });
 
+//scrollto
+$(document).ready(function (){
+	$(".scrolly").click(function (e){
+		e.preventDefault();
+		var targ = jQuery(this).attr('data-target');
+		
+		$('html, body').animate({
+			scrollTop: $(targ).offset().top-75
+		}, 1000);
+	});
+});
+
 //ddmenu build and animations with hoverintent
 jQuery(function () {
 
@@ -434,18 +446,6 @@ jQuery(function () {
 	});
 });
 
-//scrollto
-$(document).ready(function (){
-	$(".scrolly").click(function (e){
-		e.preventDefault();
-		var targ = jQuery(this).attr('data-target');
-		
-		$('html, body').animate({
-			scrollTop: $(targ).offset().top-75
-		}, 1000);
-	});
-});
-
 jQuery(function () { 
 	jQuery('.navbar-nav .dropdown > a').attr("aria-expanded","false");
 	jQuery('.navbar-nav .dropdown > a').attr("aria-haspopup","true");
@@ -459,3 +459,7 @@ jQuery(function () {
         }
     });
 });
+
+setTimeout(function(){
+      $('.antiCls').css("visibility", "visible");
+  }, 800);
