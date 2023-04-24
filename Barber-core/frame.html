@@ -48,7 +48,7 @@
 	<!--END: page_styles-->
 
 </head>
-<body class="[body_class]" data-currency="[currency_symbol]">
+<body class="[body_class]" data-currency="[currency_symbol]" data-decimal="[decimal_places]">
 	<div id="skip">
         <a href="#site-header">Skip to Header</a>
         <a href="#page-content">Skip to Main Content</a>
@@ -59,6 +59,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-8">
+						<!--START: FRAME_MENU-->
 						<nav id="menulinks-outer" class="menulinks hidden-sm row">
 							<ul id="menulinks" class="nav navbar-nav">
 								<li id="sticky-toggle"><a href="#caTnaV" role="button" data-toggle="collapse" class="collapsed" aria-label="Menu Toggle"><span role="presentation" class="icon-menu"></span></a></li>
@@ -69,6 +70,7 @@
 								<!--END: menuitems_view-->
 							</ul>
 						</nav>
+						<!--END: FRAME_MENU-->
 					</div>
 					<div class="col-sm-4">
 						<ul id="menulinks-" class="nav navbar-nav">
@@ -210,11 +212,11 @@
 							</div>
 							
 							<!--START: FRAME_LINKS-->
-							<ul id="extrapages" class="list-unstyled extrapages row">
+							<ul id="extrapages" class="list-unstyled extrapages row" aria-hidden="menu">
 								<li class="label hidden">Links</li>
 								<!--START: LINKS-->
 								<!--START: LINK_FORMAT-->
-								<li class="col-sm-6"><a href="infopage.asp?page=[link_id]&extra=1" target="[link_target]" class="menu-bottom">[link_name]</a></li>
+								<li class="col-sm-6" role="menuitem"><a href="infopage.asp?page=[link_id]&extra=1" target="[link_target]" class="menu-bottom" aria-hidden="menuitem">[link_name]</a></li>
 								<!--END: LINK_FORMAT-->
 								<!--END: LINKS-->
 							</ul>
