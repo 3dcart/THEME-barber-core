@@ -151,6 +151,11 @@ section.subcategories_block {
         margin: 0 auto 20px auto;
     }
 }
+@media (max-width: 767px) {
+	.antiCls-xs { 
+		visibility: hidden; 
+	}
+}
 .subcategories > ul > li > a {
     color: #5d5d5d;
     text-decoration: none;
@@ -2587,4 +2592,9 @@ body.view-cart .middle-grid, body.my-account .middle-grid {
 @keyframes stuckFadeIn{
 	0%{opacity:0}
 	100%{opacity:1}
+}
+@media(min-width: 768px) {
+    .revealOnScroll {
+        opacity:0;
+    }
 }
