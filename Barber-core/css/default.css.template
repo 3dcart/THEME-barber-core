@@ -885,7 +885,7 @@ body.home-page .header-navigation {
 }
 
 .custom_mid {
-	margin-top: 10px;
+	margin-top: 0px;
 }
 @media(min-width: 992px) {
 	.custom_mid {
@@ -2034,7 +2034,7 @@ span.freeshipping {
 @media(max-width: 767px) {
     .logo {
         text-align: center;
-        height: 90px;
+        height: 70px;
     }
     .logo img {
         position: absolute;
