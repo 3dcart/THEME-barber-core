@@ -461,5 +461,5 @@ jQuery(function () {
 });
 
 setTimeout(function(){
-      $('.antiCls').css("visibility", "visible");
-  }, 800);
+	$('.antiCls, .antiCls-xs').css("visibility", "visible");
+}, 800);

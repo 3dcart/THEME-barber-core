@@ -48,7 +48,7 @@
 	<!--END: page_styles-->
 
 </head>
-<body class="[body_class]" data-currency="[currency_symbol]">
+<body class="[body_class]" data-currency="[currency_symbol]" data-decimal="[decimal_places]">
 	<div id="skip">
         <a href="#site-header">Skip to Header</a>
         <a href="#page-content">Skip to Main Content</a>
@@ -59,6 +59,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-8">
+						<!--START: FRAME_MENU-->
 						<nav id="menulinks-outer" class="menulinks hidden-sm row">
 							<ul id="menulinks" class="nav navbar-nav">
 								<li id="sticky-toggle"><a href="#caTnaV" role="button" data-toggle="collapse" class="collapsed" aria-label="Menu Toggle"><span role="presentation" class="icon-menu"></span></a></li>
@@ -69,6 +70,7 @@
 								<!--END: menuitems_view-->
 							</ul>
 						</nav>
+						<!--END: FRAME_MENU-->
 					</div>
 					<div class="col-sm-4">
 						<ul id="menulinks-" class="nav navbar-nav">
@@ -106,11 +108,11 @@
 					<div class="col-xs-3 visible-xs text-center head-mobile-nav">
 						<a href="#" id="mobile-menu-trigger" role="button">
 							<span role="presentation" class="icon-menu"></span>
-							<div>Menu</div>
+							<div class="sr-only">Menu</div>
 						</a>
 					</div>
 
-					<div class="col-md-3 col-sm-4 col-xs-6">
+					<div class="col-md-3 col-sm-6 col-xs-6">
 						<div class="row">
 							<div class="logo">
 								<!--START: global_header-->
@@ -121,7 +123,7 @@
 						</div>
 					</div>
 					
-					<div class="col-md-5 col-sm-8 custom_mid hidden-xs">
+					<div class="col-md-5 col-sm-6 custom_mid hidden-xs">
 						<div class="row">
 							
 							<!--START: FRAME_SEARCH-->
@@ -138,7 +140,7 @@
 						</div>
 					</div>
 					
-					<div class="col-md-4 col-sm-4 custom_mid hidden-xs">
+					<div class="col-md-4 col-sm-12 custom_mid hidden-xs">
 						<div class="row">
 							<button type="button" id="mobile-menu-trigger2" class="pull-right btn btn-default visible-sm">
 								<span role="presentation" class="icon-menu"></span> Menu
@@ -154,7 +156,7 @@
 						<a href="#" class="pull-right" role="button" data-toggle="modal" data-target="#searchModal" aria-label="Search Modal">
 							<span class="sr-only" role="presentation">Search</span>
 							<span role="presentation" class="icon-search"></span>
-							<div>Search</div>
+							<div class="sr-only">Search</div>
 						</a>
 					</div>
 				</div>
@@ -210,11 +212,11 @@
 							</div>
 							
 							<!--START: FRAME_LINKS-->
-							<ul id="extrapages" class="list-unstyled extrapages row">
+							<ul id="extrapages" class="list-unstyled extrapages row" role="list">
 								<li class="label hidden">Links</li>
 								<!--START: LINKS-->
 								<!--START: LINK_FORMAT-->
-								<li class="col-sm-6"><a href="infopage.asp?page=[link_id]&extra=1" target="[link_target]" class="menu-bottom">[link_name]</a></li>
+								<li class="col-sm-6" role="listitem"><a href="infopage.asp?page=[link_id]&extra=1" target="[link_target]" class="menu-bottom">[link_name]</a></li>
 								<!--END: LINK_FORMAT-->
 								<!--END: LINKS-->
 							</ul>
@@ -229,7 +231,7 @@
 								<div class="container">
 									<div class="row">
 										<div class="col-sm-12">
-											<h3>[frame_mailinglist]</h3>
+											<h2>[frame_mailinglist]</h2>
 										</div>
 										<div class="col-sm-12">
 											<div class="row">
@@ -237,7 +239,7 @@
 													<div class="mailinglist-form clearfix">
 														<input class="mailinglist-input form-control" type="text" name="email" placeholder="Signup for our Newsletter" autocomplete="off"  aria-required="true" aria-label="email address" aria-invalid="true"/>
 														<button class="mailinglist-submit btn btn-default btn-inverse" type="submit" name="www" aria-label="mailinglist button">
-															<span id="mailing-btn-txt "><i role="presentation" class="icon-mail"></i>[mailinglist_button]</span>
+															<span id="mailing-btn-txt"><i role="presentation" class="icon-mail"></i></span>
 															<span id="mailing-btn-load" class="mailing-btn-load icon-spin2 animate-spin hidden"></span>
 														</button>
 													</div>
@@ -253,7 +255,7 @@
 									</div>
 								</div>
 							</form>
-							<div id="mailinglist-response" class="mailinglist-response">
+							<div id="mailinglist-response" class="mailinglist-response antiCls">
 								<div class="mailinglist-error hidden">[mailinglist_email-error]</div>
 								<div class="mailinglist-subscribed hidden">[mailinglist_subscribe-success]</div>
 								<div class="mailinglist-unsubscribed hidden">[mailinglist_unsubscribe-success]</div>
@@ -422,7 +424,7 @@
 
 	<!--START: page_scripts-->
 	<script src="assets/templates/common-core/lib/jquery.min.js"></script>
-	<script src="assets/templates/common-core/lib/jquery-migrate-3.0.1.min.js"></script>
+	<script src="assets/templates/common-core/lib/jquery-migrate-3.0.1.min.js" defer="defer"></script>
     <script src="assets/templates/common-core/lib/bootstrap/js/bootstrap.js" defer="defer"></script>
     <script src="assets/templates/common-core/js/core.js" defer="defer"></script>
     <script src="assets/templates/[template]/js/main.js" defer="defer"></script>
@@ -447,7 +449,7 @@
             media="screen"
         />
     </noscript>
-    <script defer type="text/javascript" src="assets/templates/common-core/quicksearch/jquery.quicksearch.js"></script>
+    <script type="text/javascript" src="assets/templates/common-core/quicksearch/jquery.quicksearch.js" defer="defer"></script>
     <script type="text/javascript">
         jQuery(function () {
             jQuery('#searchlight').searchlight('/search_quick.asp');

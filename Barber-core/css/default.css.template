@@ -3,8 +3,12 @@
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Old+Standard+TT:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap');
-.antiCls { 
+.antiCls, .antiCls-xs { 
     visibility: hidden; 
+}
+.flex-direction-nav a, .flex-viewport {
+	transform: translateZ(0);
+	will-change: transform;
 }
 .copyright_txt a{
     color:#fff;
@@ -146,6 +150,11 @@ section.subcategories_block {
         max-width: 300px;
         margin: 0 auto 20px auto;
     }
+}
+@media (max-width: 767px) {
+	.antiCls-xs { 
+		visibility: hidden; 
+	}
 }
 .subcategories > ul > li > a {
     color: #5d5d5d;
@@ -876,7 +885,7 @@ body.home-page .header-navigation {
 }
 
 .custom_mid {
-	margin-top: 10px;
+	margin-top: 0px;
 }
 @media(min-width: 992px) {
 	.custom_mid {
@@ -2025,7 +2034,7 @@ span.freeshipping {
 @media(max-width: 767px) {
     .logo {
         text-align: center;
-        height: 90px;
+        height: 70px;
     }
     .logo img {
         position: absolute;
@@ -2583,4 +2592,9 @@ body.view-cart .middle-grid, body.my-account .middle-grid {
 @keyframes stuckFadeIn{
 	0%{opacity:0}
 	100%{opacity:1}
+}
+@media(min-width: 768px) {
+    .revealOnScroll {
+        opacity:0;
+    }
 }
