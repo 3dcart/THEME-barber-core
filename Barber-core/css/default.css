@@ -1280,10 +1280,10 @@ ul.extrapages li a {
 	font-weight: 400;
 	line-height:1.5em;
 }
-@media(min-width: 768px) {
+@media(min-width: 992px) {
     .copyright {
 		text-align: left;
-		}
+    }
 }
 .copyright_txt {
 	padding-top: 6px;
@@ -1385,7 +1385,7 @@ ul.extrapages li a {
     margin: 12px 15px 0 0;
     line-height: 13px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	.maillist-options {
 		text-align: left;
 	}
@@ -1419,7 +1419,7 @@ ul.payment-icons {
 	text-align: center;
 	color: #fff;
 }
-@media(min-width: 768px) {
+@media(min-width: 992px) {
     ul.payment-icons {
         text-align: right;
     }
@@ -1442,7 +1442,7 @@ ul.social-icons li.social-icons-label {
     font-size: 14px;
     font-weight: 600;
     color: #fff;
-    vertical-align: text-bottom;
+    vertical-align: inherit;
     text-transform: uppercase;
     padding: 0 0px;
     margin: 0 0 5px !important;
@@ -2033,6 +2033,16 @@ span.freeshipping {
     }
     .footer-social {
         text-align: center;
+    }
+    ul.extrapages {
+        text-align: center;
+    }
+    .mailist-box > h2 {
+        text-align: center;
+    }
+    footer .col-md-8 {
+        width: inherit;
+        float: inherit;
     }
 }
 @media(max-width: 767px) {

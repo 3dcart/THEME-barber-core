@@ -216,7 +216,7 @@
           "label": "Footer text color",
           "name": "footer_text_color",
           "type": 2,
-          "value": "cccccc",
+          "value": "FFFFFF",
           "group": 4
         }
       ]
