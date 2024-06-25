@@ -2034,10 +2034,10 @@ span.freeshipping {
     ul.extrapages {
         text-align: center;
     }
-    .col-sm-12 > h2 {
+    .mailist-box > h2 {
         text-align: center;
     }
-    footer .col-sm-8 {
+    footer .col-md-8 {
         width: inherit;
         float: inherit;
     }
