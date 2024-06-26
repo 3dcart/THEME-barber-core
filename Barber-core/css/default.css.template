@@ -2034,12 +2034,8 @@ span.freeshipping {
     ul.extrapages {
         text-align: center;
     }
-    .mailist-box > h2 {
+    .mailist-box h2 {
         text-align: center;
-    }
-    footer .col-md-8 {
-        width: inherit;
-        float: inherit;
     }
 }
 @media(max-width: 767px) {
